@@ -8,6 +8,7 @@ exports.getTareas = (req, res) => {
 exports.addTarea = (req, res) => {
   let { nombre, completed } = req.body;
   let nuevo = { id: Date.now(), nombre, completed };
+  console.log('Se agregaron nuevas tareas')
   tareas.push(nuevo);
   res.status(201).json(nuevo);
 };
